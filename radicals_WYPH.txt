@@ -766,6 +766,29 @@ r	15	P444	35	15.35	Q304	Y304	日入-	日入-	日入-	28a	385q	日入-	日入-	�
 
 
 
+# In 重編併部依三十六母再顯之圖, those radicals have citation mark of 龍龕:
+# * q009 (名)
+# * q010 (亭)
+# * q012 (寧)
+# * q013 (孚)
+# * q014 (䧹)
+# * q015 (尼)
+# * q016 (圭)
+# * q021 (夜)
+# * q030 (畨)
+# * q033 (尒)
+# Radicals below are not directly marked with citation mark of 龍龕 but placed
+# just under the radicals listed above.
+# * q034 (卷) - under q016 (圭)
+# * q035 (幵) - under q016 (圭) and q034 (卷)
+# * q036 (𠁼) - under q014 (䧹)
+# * q027 (益) - under q014 (䧹) and q036 (𠁼)
+# Note that all radicals in 龍龕餘部 (Longkan extra radicals) of Qunji Yupian [群籍玉篇]
+# except non-merged ones are listed above. It seems Wuyin Pianhai [五音篇海] does not distinguish
+# between 龍龕 radicals and 會玉川篇 radicals (q034-q036).
+# [JA] 統合された部首のうち群籍玉篇の龍龕餘部にあったものは上記のように
+# 全て直接的ないし間接的に龍龕の出典マークが付されている。
+# 五音篇海は、龍龕の部首と會玉川篇の部首 (q034-q036) を区別しないようだ。
 M	Q168	Y167	見	古宜切	箕	箕	Q167	P113	竹	竹	*
 M	Q402	Y402	見	古昏切	䖵	䖵	Q401	P334	虫	虫	*
 M	Q465	Y465	見	公丸切	毌	母	Q475	P208	毋	毋	貫,毋
