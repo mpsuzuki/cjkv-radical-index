@@ -1,247 +1,3 @@
-#
-#
-#	Radical list of Wuyin Pianhai (五音篇海/改併五音類聚四聲篇)
-#
-#
-#	Edited in 2018 by Tsukasa OI <floss_cjkv@irq.a4lg.com>.
-#
-#	To the extent possible under law, the author(s) have dedicated all
-#	copyright and related and neighboring rights to this software to the
-#	public domain worldwide.
-#	This software is distributed without any warranty.
-#
-#	You should have received a copy of the CC0 Public Domain Dedication
-#	along with this software. If not,
-#	see <http://creativecommons.org/publicdomain/zero/1.0/>.
-#
-#
-#
-#	底本/Sources (two editions of 五音篇海):
-#	1. 成化丁亥重刊改併五音類聚四聲篇 (明刻本; 正德補修本)
-#	1a. 國家圖書館 110.31 01092 http://rbook2.ncl.edu.tw/Search/SearchDetail?item=b273e1fff1e746a4b6f77406dfeaf3c8fDQzMDcw0
-#	1b. 國家圖書館 110.31 01091 http://rbook2.ncl.edu.tw/Search/SearchDetail?item=d40309c7a256405ba4f312e2a6f326a3fDQzMDY50
-#	1c. 續修四庫全書 第229册
-#	1d. Internet Archive
-#	    https://archive.org/details/02076727.cn
-#	    https://archive.org/details/02076728.cn
-#	    https://archive.org/details/02076729.cn
-#	    https://archive.org/details/02076730.cn
-#	    https://archive.org/details/02076731.cn
-#	    https://archive.org/details/02076732.cn
-#	    https://archive.org/details/02076733.cn
-#	    https://archive.org/details/02076734.cn
-#	    https://archive.org/details/02076735.cn
-#	2. 至元重刊五音篇 (元刻本)
-#	2a. 國家圖書館 110.31 01089 http://rbook2.ncl.edu.tw/Search/SearchDetail?item=81fdacd69cc644a09c476cc48e44b73efDQzMDY30
-#
-#
-#	V行 (巻)
-#	$1 : "v"
-#	$2 : 巻次
-#	$3 : 巻内の (目録専用の番号等がついていない) 丁数 (成化丁亥重刊改併五音類聚四聲篇 以降)
-#	     Note: 巻二には目録専用の二丁 (目一および目二) があるが、これらは除外する。
-#	$4 : 巻内の丁数 (元刻本)
-#
-#	V-line (volume)
-#	$1 : "v"
-#	$2 : Volume number
-#	$3 : Total leafs that have page number (on 成化丁亥重刊改併五音類聚四聲篇 and later)
-#	     Note: volume 2 has two extra leafs on index (目一 and 目二)
-#	           but they are excluded.
-#	$4 : Total leafs (on 至元重刊五音篇)
-#
-#	R行 (部首)
-#	$01 : "r"
-#	$02 : 巻次
-#	$03 : 部首コード (P001 から P444 まで)
-#	$04 : 巻内の部首番号 (01 から 59 まで)
-#	$05 : 元刻本における巻次と巻内の部首番号 (vv.nn)
-#	$06 : 群籍玉篇部首リンク (Qnnn/qnnn, 非存在の場合は "****")
-#	$07 : 部首リンク 1 (Ynnn もしくは Lnnn)
-#	$08 : 部首の発音表示 (元刻本; 総合目録)
-#	$09 : 部首の発音表示 (元刻本; 巻頭目録, 國家圖書館本で欠損している場合には "*****")
-#	$10 : 部首の発音表示 (元刻本; 本文)
-#	      1 文字目: 三十六字母のひとつ ("見" から "日" まで)
-#	      2 文字目: 四声のひとつ ("平", "上", "去" もしくは "入"), 元刻本の不明瞭な箇所は、全角の “Ａ” もしくは “Ｂ” で表示
-#	      3 文字目: 発音表示の性質
-#	          "+": 明示的なラベル
-#	          "-": 明示的なラベルがない (直前のものと同じと推定)
-#	          "~": 明示的なラベルがないが、三十六字母ラベル (同字母の平聲と推定)
-#	$11 : 位置 (元刻本; 丁数単位)
-#	      至元重刊五音篇およびそれ以前における位置を、巻内の丁数表示と位置で表記する:
-#	          "a": 表, 一葉の右半分 (見開き左側)
-#	          "b": 裏, 一葉の左半分 ("a" の次の見開きにおける右側)
-#	$12 : 位置 (元刻本 [國家圖書館本]; オンライン画像)
-#	      http://rbook2.ncl.edu.tw/Search/SearchDetail?item=b96515ad927e4100b08fbe774fd0c938fDQzMDY30
-#	      にある元刻本の画像における位置を、画像番号と左右で表記する (NNNs; 画像番号 NNN [001-389]):
-#	          "p": 右
-#	          "q": 左
-#	$13 : 部首の発音表示 (成化丁亥重刊改併五音類聚四聲篇; 総合目録)
-#	$14 : 部首の発音表示 (成化丁亥重刊改併五音類聚四聲篇; 巻頭目録)
-#	$15 : 部首の発音表示 (成化丁亥重刊改併五音類聚四聲篇; 本文部首)
-#	      1 文字目: 三十六字母のひとつ ("見" から "日" まで)
-#	      2 文字目: 四声のひとつ ("平", "上", "去" もしくは "入"), 元刻本の不明瞭な箇所は、全角の “Ａ” もしくは “Ｂ” で表示
-#	      3 文字目: 発音表示の性質
-#	          "+": 明示的なラベル
-#	          "-": 明示的なラベルがない (直前のものと同じと推定)
-#	          "~": 明示的なラベルがないが、三十六字母ラベル (同字母の平聲と推定)
-#	$16 : 反切表記 (成化丁亥重刊改併五音類聚四聲篇; 総合目録)
-#	$17 : 反切表記 (成化丁亥重刊改併五音類聚四聲篇; 巻頭目録)
-#	$18 : 反切表記 (成化丁亥重刊改併五音類聚四聲篇; 本文)
-#	      元表記をもとに、康熙字典の文字を使い、異体字を可能ならば統合するように正規化
-#	$19 : 位置 (成化丁亥重刊改併五音類聚四聲篇; 丁数単位)
-#	      成化丁亥重刊改併五音類聚四聲篇およびそれ以降における位置を、巻内の丁数表示と位置で表記する:
-#	          "a": 表, 一葉の右半分 (見開き左側)
-#	          "b": 裏, 一葉の左半分 ("a" の次の見開きにおける右側)
-#	      注意: 丁数表記であり、巻頭から数えた丁数とは巻二で異なる。
-#	$20 : 位置 (成化丁亥重刊改併五音類聚四聲篇; 續修四庫全書)
-#	      續修四庫全書の第229冊における位置を、ページ番号と位置で示す (0229-ppppP):
-#	          "a": ページ中の右上
-#	          "b": ページ中の左上
-#	          "c": ページ中の右下
-#	          "d": ページ中の左下
-#	$21 : 位置 (成化丁亥重刊改併五音類聚四聲篇; Internet Archive)
-#	      Internet Archive 上にアップロードされている成化丁亥重刊改併五音類聚四聲篇
-#	      (續修四庫全書の第229冊ベース) 上の位置を、アーカイブ番号と画像番号で示す (AAAAAAAA-pppppppp) ->
-#	           https://archive.org/details/AAAAAAAA.cn (画像番号 pppppppp)
-#	$22 : 部首
-#	      一貫性のため、radical_YP.txt (玉篇) と radical_LKSJ.txt (龍龕) を元に設定
-#	$23 : 部首表現 (成化丁亥重刊改併五音類聚四聲篇; 総合目録)
-#	$24 : 部首表現 (成化丁亥重刊改併五音類聚四聲篇; 巻頭目録)
-#	$25 : 部首表現 (成化丁亥重刊改併五音類聚四聲篇; 本文)
-#	      原文に適度に近い Unicode 表現
-#	$26 : 代替表現
-#	      検索を容易にするための、カラム "," 区切りの代替表記 (異体もしくは類似字形) リスト。存在しないなら "*"。
-#
-#	R-line (radical)
-#	$01 : "r"
-#	$02 : Volume number
-#	$03 : Radical code (P001 through P444)
-#	$04 : Radical code inside a volume (01 through 59)
-#	$05 : Volume and radical code in 至元重刊五音篇 (vv.nn)
-#	$06 : Radical link to Qunji Yupian [群籍玉篇] (Qnnn/qnnn, "****" if none exists)
-#	$07 : Radical link 1 (Ynnn or Lnnn)
-#	$08 : Pronunciation of the radical (至元重刊五音篇; general index)
-#	$09 : Pronunciation of the radical (至元重刊五音篇; per-volume index, "*****" if source lacks corresponding per-volume index)
-#	$10 : Pronunciation of the radical (至元重刊五音篇; main text)
-#	      1st character: One of the Thirty-six initials ("見" through "日")
-#	      2nd character: One of the Four tones ("平", "上", "去" or "入")
-#	      3rd character: Type of the label
-#	          "+": Pronunciation is labeled explicitly
-#	          "-": Not labeled (assuming the same as previously-labeled radical)
-#	          "~": Not labeled but just after the label of one of the thirty-six initials
-#	               (assuming "平聲" of given initial)
-#	$11 : Position (至元重刊五音篇; leaf)
-#	      This is the position on 至元重刊五音篇 (and before).
-#	      Leaf number in the volume and its position:
-#	          "a": Recto / Right half of a leaf (left half of a spread)
-#	          "b": Verso / Left half of a leaf (right half of a spread subsequent to "a")
-#	$12 : Position (至元重刊五音篇; online image on the National Central Library)
-#	      This is the position on online image of 至元重刊五音篇:
-#	      http://rbook2.ncl.edu.tw/Search/SearchDetail?item=b96515ad927e4100b08fbe774fd0c938fDQzMDY30
-#	      by image number and left/right (NNNs; image number NNN [001-389]):
-#	          "p": Verso / right
-#	          "q": Recto / left
-#	$13 : Pronunciation of the radical (成化丁亥重刊改併五音類聚四聲篇; general index)
-#	$14 : Pronunciation of the radical (成化丁亥重刊改併五音類聚四聲篇; per-volume index, "*****" if source lacks corresponding per-volume index)
-#	$15 : Pronunciation of the radical (成化丁亥重刊改併五音類聚四聲篇; main text)
-#	      1st character: One of the Thirty-six initials ("見" through "日")
-#	      2nd character: One of the Four tones ("平", "上", "去" or "入")
-#	      3rd character: Type of the label
-#	          "+": Pronunciation is labeled explicitly
-#	          "-": Not labeled (assuming the same as previously-labeled radical)
-#	          "~": Not labeled but just after the label of one of the thirty-six initials
-#	               (assuming "平聲" of given initial)
-#	$16 : Fanqie rendering (成化丁亥重刊改併五音類聚四聲篇; general index)
-#	$17 : Fanqie rendering (成化丁亥重刊改併五音類聚四聲篇; per-volume index)
-#	$18 : Fanqie rendering (成化丁亥重刊改併五音類聚四聲篇; main text)
-#	      This is based on fanqie renderings on 成化丁亥重刊改併五音類聚四聲篇 and normalized to use ideographs from 康熙字典.
-#	$19 : Position (成化丁亥重刊改併五音類聚四聲篇; leaf)
-#	      This is the position on 成化丁亥重刊改併五音類聚四聲篇 (and later).
-#	      Leaf number in the volume and its position:
-#	          "a": Recto / Right half of a leaf (left half of a spread)
-#	          "b": Verso / Left half of a leaf (right half of a spread subsequent to "a")
-#	$20 : Position (成化丁亥重刊改併五音類聚四聲篇; 續修四庫全書)
-#	      This is the position on the volume 229 of 續修四庫全書.
-#	      Page number and its position (0229-ppppP):
-#	          "a": Right top side of the page
-#	          "b": Left top side of the page
-#	          "c": Right bottom side of the page
-#	          "d": Left bottom side of the page
-#	$21 : Position (Internet Archive)
-#	      This is the position on 成化丁亥重刊改併五音類聚四聲篇 on
-#	      the Internet Archive (based on volume 229 of 續修四庫全書).
-#	      Archive number and its image number (AAAAAAAA-pppppppp) ->
-#	           https://archive.org/details/AAAAAAAA.cn (image pppppppp)
-#	$22 : Radical
-#	      This field is normalized using radical_YP.txt (玉篇)
-#	      and radical_LKSJ.txt (龍龕) for consistency.
-#	$23 : Radical representation (成化丁亥重刊改併五音類聚四聲篇; general index)
-#	$24 : Radical representation (成化丁亥重刊改併五音類聚四聲篇; per-volume index)
-#	$25 : Radical representation (成化丁亥重刊改併五音類聚四聲篇; main text)
-#	      Unicode representation (reasonably close to the original)
-#	$26 : Alternative representations
-#	      This column is a column-separated list of variant / similar characters
-#	      of the radical to make searching easier. "*" if missing.
-#
-#
-#	M行 (統合された部首; 巻一の重編併部依三十六母再顯之圖による)
-#	$01 : "M"
-#	$02 : 統合対象の部首 - 群籍玉篇リンク (Qnnn/qnnn)
-#	$03 : 統合対象の部首 - 玉篇/龍龕リンク (Ynnn/Lnnn)
-#	$04 : 統合対象の部首の三十六字母 ("見" から "日" まで)
-#	$05 : 統合対象の部首の発音 (反切表記)
-#	$06 : 統合対象の部首
-#	      一貫性のため、radical_YP.txt と radical_LKSJ.txt を元に正規化
-#	$07 : 統合対象の部首表現
-#	$08 : 統合先の部首 - 群籍玉篇リンク (Qnnn/qnnn)
-#	      Note: 雜部へ統合する場合、Q545 は使用せず龍龕餘部である q037 を使用。
-#	$09 : 統合先の部首 - 五音篇海リンク (Pnnn)
-#	      Note: 雜部へ統合する場合、特殊な記号である "P000" を使用。
-#	$10 : 統合先の部首 (正規化)
-#	$11 : 統合先の部首表現
-#	$12 : 統合対象の代替表現
-#	      検索を容易にするための、カラム "," 区切りの代替表記 (異体もしくは類似字形) リスト。存在しないなら "*"。
-#
-#	M行 (merged radical; according to 重編併部依三十六母再顯之圖 in volume 1)
-#	$01 : "M"
-#	$02 : Merged from: Link to Qunji Yupian [群籍玉篇] (Qnnn/qnnn)
-#	$03 : Merged from: Link to Yupian [玉篇] / Longkan Shoujian [龍龕手鑑] (Ynnn/Lnnn)
-#	$04 : Merged from: Initial (one of the Thirty-six initials from "見" through "日")
-#	$05 : Merged from: Fanqie rendering
-#	$06 : Merged from: Radical (normalized)
-#	$07 : Merged from: Radical representation
-#	$08 : Merged to: Link to Qunji Yupian [群籍玉篇] (Qnnn/qnnn)
-#	      Note: "q037" (one of 龍龕餘部) if merged to "雜" 部, not "Q545" (which is added by Qunji Yupian).
-#	$09 : Merged to: Link to Wuyin Pianhai [五音篇海] (Pnnn)
-#	      Note: "P000" (special symbol) if merged to "雜" 部.
-#	$10 : Merged to: Radical (normalized)
-#	$11 : Merged to: Radical representation
-#	$12 : Merged from: Alternative representations
-#	      This column is a column-separated list of variant / similar characters
-#	      of the radical to make searching easier. "*" if missing.
-#
-#
-#	正規化の原則:
-#
-#	1. 康煕字典を用いて推奨される字形を決定する
-#	2. 知る限りの異体字は統合する (例: 毘-毗、隣-鄰、案-桉)
-#	3. ただし、異なる意味の使用がありうるものは統合しない
-#	   ("余" は "餘" の俗字たりうるが、異なる用法が確立している)
-#	a. 蓋-盖-盍 は (内々の理由から) 統合している
-#
-#	Normalization Principles:
-#
-#	1. Use Kangxi Zidian (康煕字典) to determine preferred forms.
-#	2. Variants (as far as I know) are unified (e.g. 毘-毗, 隣-鄰, 案-桉).
-#	3. However, characters with possible different uses are not unified
-#	   ("余" can be a variant of "餘" but different uses are established).
-#	a. 蓋-盖-盍 are merged (for some reason)
-#
-#
-
-
-
 v	02	65	42
 r	02	P001	01	02.01	Q271	Y269	見平+	見平+	見平+	02a	023q	見平+	見平+	見平+	居吟切	居吟切	居吟切	01a	0229-0262a	02076727-00000068	金	金	金	金	钅
 r	02	P002	02	02.02	Q260	Y260	見平-	見平-	見平-	07b	029p	見平-	見平-	見平-	居銀切	居銀切	居銀切	10a	0229-0266c	02076727-00000086	斤	斤	斤	斤	*
@@ -259,8 +15,6 @@ r	02	P013	13	02.13	Q275	Y274	見平-	見平-	見平-	14b	036p	見平-	見平-	�
 r	02	P014	14	02.14	Q483	Y483	見平-	見平-	見平-	14b	036p	見平-	見平-	見平-	居周切	居周切	居周切	20b	0229-0271d	02076727-00000107	丩	丩	丩	丩	*
 r	02	P015	15	02.15	Q078	Y078	見平-	見平-	見平-	14b	036p	見平-	見平-	見平-	公懷切	公懷切	公懷切	20b	0229-0271d	02076727-00000107	𠦬	𠦬	𠦬	𠦬	乖
 r	02	P016	16	02.16	Q021	Y017	見平-	見平-	見平-	14b	036p	見平-	見平-	見平-	居英切	居英切	居英切	20b	0229-0271d	02076727-00000107	京	京	京	京	*
-# P017: Although "光" 部 in Qunji Yupian [群籍玉篇] is stated that a new radical in that dictionary
-#       but linked here because of (1) similarities of Qunji Yupian and Wuyin Pianhai and (2) the fact that "光" 部 in Qunji Yupian is missing (by lacking entire volume 21).
 r	02	P017	17	02.17	Q343	L042	見平-	見平-	見平-	14b	036p	見平-	見平-	見平-	古黃切	古黃切	古黃切	20b	0229-0271d	02076727-00000107	光	光	光	光	*
 r	02	P018	18	02.18	Q520	Y518	見上+	見上+	見上+	15a	036q	見上+	見上+	見上+	居喜切	居喜切	居喜切	21a	0229-0272a	02076727-00000108	己	已	己	己	*
 r	02	P019	19	02.19	Q011	Y011	見上-	見上-	見上-	15a	036q	見上-	見上-	見上-	居隱切	居隱切	居隱切	21b	0229-0272b	02076727-00000109	𡎸	𡎸	𡎸	𡎸	*
@@ -272,7 +26,6 @@ r	02	P024	24	02.24	Q301	Y301	見上-	見上-	見上-	15b	037p	見上-	見上-	�
 r	02	P025	25	02.25	Q507	Y505	見上-	見上-	見上-	16b	038p	見上-	見上-	見上-	古酒切	古酒切	居有切	24a	0229-0273c	02076727-00000114	九	九	九	九	*
 r	02	P026	26	02.26	Q232	Y234	見上-	見上-	見上-	17a	038q	見上-	見上-	見上-	居魯切	居魯切	九魯切	24a	0229-0273c	02076727-00000114	鼓	鼓	鼓	鼓	*
 r	02	P027	27	02.27	Q246	Y248	見上-	見上-	見上-	17b	039p	見上-	見上-	見上-	居矣切	居矣切	居矣切	25a	0229-0274a	02076727-00000116	几	几	几	几	*
-# P028: It has citation mark of 俗字背篇 on the main text (see merged radical Q067 for details).
 r	02	P028	28	02.28	Q067	Y067	見上-	見上-	見上-	17b	039p	見上-	見上-	見上-	居竦切	居竦切	居竦切	25b	0229-0274b	02076727-00000117	𠬞	廾	廾	廾	卄
 r	02	P029	29	02.29	Q467	Y467	見上-	見上-	見上-	18a	039q	見上-	見上-	見上-	古本切	古本切	古混切	26b	0229-0274d	02076727-00000119	㯻	㯻	㯻	㯻	*
 r	02	P030	30	02.30	Q117	Y118	見上-	見上-	見上-	18a	039q	見上-	見上-	見上-	古老切	古老切	古老切	26b	0229-0274d	02076727-00000119	夰	夰	夰	夰	*
@@ -295,8 +48,6 @@ r	02	P046	46	02.46	Q079	Y079	見入-	見入-	見入-	24b	046p	見入-	見入-	�
 r	02	P047	47	02.47	Q459	Y459	溪平+	溪平+	溪平+	26a	047q	溪平+	溪平+	溪平+	丘顏切	丘顏切	丘顏切	39a	0229-0281a	02076727-00000144	臤	臤	臤	臤	*
 r	02	P048	48	02.48	Q095	Y094	溪上+	溪上+	溪上+	26a	047q	溪上+	溪上+	溪上+	苦老切	苦老切	苦道切	39a	0229-0281a	02076727-00000144	丂	丂	丂	丂	*
 r	02	P049	49	02.49	Q254	Y235	溪上-	溪上-	溪上-	26a	047q	溪上-	溪上-	溪上-	羌顗切	羌顗切	羌顗切	39b	0229-0281b	02076727-00000145	豈	豈	豈	豈	*
-# P050: 續修四庫全書: two pages (50b and 51a - not one leaf but half of two leaves) are missing (missing pages are left blank).
-# P050: IA: Blank pages in 續修四庫全書 are skipped. 02076727-00000166 == 50a, 02076727-00000167 == 51b
 r	02	P050	50	02.50	Q056	Y056	溪上-	溪上-	溪上-	26a	047q	溪上-	溪上-	溪上-	苦苟切	苦苟切	苦狗切	39b	0229-0289b	02076727-00000145	口	口	口	口	*
 r	02	P051	51	02.51	Q094	Y095	溪上-	溪上-	溪上-	36a	057q	溪上-	溪上-	溪上-	快我切	快我切	口我切	55b	0229-0297b	02076727-00000175	可	可	可	可	*
 r	02	P052	52	02.52	Q365	Y364	溪上-	溪上-	溪上-	36b	058p	溪上-	溪上-	溪上-	苦泫切	苦泫切	苦泫切	55b	0229-0297b	02076727-00000175	犬	犬	犬	犬	犭
@@ -315,10 +66,7 @@ r	03	P060	01	03.01	Q233	Y231	群平+	群平+	群平+	01b	066p	群平+	群平+	�
 r	03	P061	02	03.02	Q274	Y272	群平-	群平-	群平-	01b	066p	群平-	群平-	群平-	渠姬切	渠姬切	巨基切	01b	0229-0294d	02076728-00000003	丌	丌	丌	丌	*
 r	03	P062	03	03.03	q004	L050	群平-	群平-	群平-	01b	066p	群平-	群平-	群平-	渠宜切	巨宜切	渠之切	02a	0229-0295a	02076728-00000004	其	其	其	其	*
 r	03	P063	04	03.04	Q198	Y202	群上+	群上+	群上+	01b	066p	群上+	群上+	群上+	渠九切	渠九切	渠九切	02a	0229-0295a	02076728-00000004	臼	𦥑	𦥑	𦥑	*
-# P064: On 至元重刊五音篇 and 金刻元修本 (國家圖書館 110.31 01088), "共" lacks the last stroke.
-#       Possibly a naming tatoo of 顯宗, father of 章宗 ("允恭"; "恭" has the same pronunciation as "共")?
 r	03	P064	05	03.05	Q450	Y450	群去+	群去+	群去+	02a	066q	群去+	群去+	群去+	渠用切	渠用切	渠用切	02b	0229-0295b	02076728-00000005	共	共	共	共	*
-# P065: "〾軒" == "⿰⿳木口十干"
 r	03	P065	06	03.06	Q090	Y090	疑平+	疑平+	疑平+	02a	066q	疑平+	疑平+	疑平+	語軒切	語軒切	魚〾軒切	02b	0229-0295b	02076728-00000005	言	言	言	言	讠
 r	03	P066	07	03.07	Q060	Y060	疑平-	疑平-	疑平-	08b	073p	疑平-	疑平-	疑平-	五加切	五加切	五加切	12a	0229-0300a	02076728-00000024	牙	牙	牙	牙	*
 r	03	P067	08	03.08	Q398	Y397	疑平-	疑平-	疑平-	08b	073p	疑平-	疑平-	疑平-	元初切	語居切	偶初切	12a	0229-0300a	02076728-00000024	魚	魚	魚	魚	鱼
@@ -339,8 +87,6 @@ r	03	P079	20	03.20	Q145	Y150	疑入-	疑入-	疑入-	23a	087q	疑入-	疑入-	�
 
 v	04	32	21
 r	04	P080	01	04.01	Q159	Y158	端平+	端平+	端平+	01b	091p	端平+	端平+	端平+	德紅切	德紅切	德紅切	02a	0229-0313a	02076728-00000076	東	東	東	東	东
-# P081: "德河切" at the general index appears to be "德可切".
-#       Considering various facts and existence of the most upper-left dot (part of "氵"?), I consider this is "河".
 r	04	P081	02	04.02	Q315	Y315	端平-	端平-	端平-	01b	091p	端平-	端平-	端平-	德河切	德河切	德河切	02a	0229-0313a	02076728-00000076	多	多	多	多	*
 r	04	P082	03	04.03	Q333	Y339	端平-	端平-	端平-	02a	091q	端平-	端平-	端平-	都寒切	都寒切	都寒切	02b	0229-0313b	02076728-00000077	丹	丹	丹	丹	*
 r	04	P083	04	04.04	Q268	Y266	端平-	端平-	端平-	02a	091q	端平-	端平-	端平-	都勞切	都勞切	都牢切	02b	0229-0313b	02076728-00000077	刀	刀	刀	刀	*
@@ -349,7 +95,6 @@ r	04	P085	06	04.06	Q518	Y516	端平-	端平-	端平-	04b	094p	端平-	端平-	�
 r	04	P086	07	04.07	Q464	Y464	端平-	端平-	端平-	04b	094p	端平-	端平-	端平-	丁丸切	丁丸切	丁丸切	07a	0229-0315c	02076728-00000086	耑	耑	耑	耑	*
 r	04	P087	08	04.08	Q341	Y342	端上+	端上+	端平-	04b	094p	端上+	端上+	端平-	丁禮切	丁禮切	丁兮切	07a	0229-0315c	02076728-00000086	氐	氐	氐	氐	*
 r	04	P088	09	04.09	Q245	Y246	端上-	端上-	端上+	05a	094q	端上-	端上-	端上+	當口切	當口切	當口切	07a	0229-0315c	02076728-00000086	斗	斗	斗	斗	*
-# P089: "都挺切" at the head of volume 4 is not clear enough (⿰木手?) but not changing the data.
 r	04	P089	10	04.10	Q237	Y241	端上-	端上-	端上-	05a	094q	端上-	端上-	端上-	都挺切	都挺切	丁冷切	07b	0229-0315d	02076728-00000087	鼎	鼎	鼎	鼎	*
 r	04	P090	11	04.11	Q393	Y390	端上-	端上-	端上-	05a	094q	端上-	端上-	端上-	都了切	都小切	都了切	08a	0229-0316a	02076728-00000088	鳥	鳥	鳥	鳥	鸟
 r	04	P091	12	04.12	Q073	Y073	端去+	端去+	端去+	10b	100p	端去+	端去+	端去+	都寇切	都寇切	都寇切	15b	0229-0319d	02076728-00000103	鬥	鬥	鬥	鬥	*
@@ -381,7 +126,6 @@ r	05	P112	04	05.04	Q231	Y233	知去+	知去+	知去+	02a	113q	知去+	知去+	�
 r	05	P113	05	05.05	Q167	Y166	知入+	知入+	知入+	02a	113q	知入+	知入+	知入+	張六切	張六切	張六切	02b	0229-0329b	02076729-00000005	竹	竹	竹	竹	*
 r	05	P114	06	05.06	Q498	Y497	知入-	知入-	知入-	09a	120q	知入-	知入-	知入-	陟劣切	陟劣切	陟劣切	11b	0229-0333d	02076729-00000023	叕	叕	叕	叕	*
 r	05	P115	07	05.07	Q533	Y531	徹上+	徹上+	徹上+	09a	120q	徹上+	徹上+	徹上+	敕久切	敕久切	敕久切	11b	0229-0333d	02076729-00000023	丑	丑	丑	丑	*
-# P116: 成化丁亥重刊改併五音類聚四聲篇: "此鬯字原在穿母収之廣韻禮部海韻倶是丑亮切玉篇海篇是敕亮敕向切今將鬯部下七字移於徹母永爲後來撿篇之便耳"
 r	05	P116	08	11.21	Q200	Y199	穿去+	穿去+	穿上-	12a	123q	徹去+	徹去+	徹去+	敕向切	敕向切	敕亮切	11b	0229-0333d	02076729-00000023	鬯	鬯	鬯	鬯	*
 r	05	P117	09	05.09	Q127	Y127	徹入-	徹入-	徹入-	09b	121p	徹入+	徹入+	徹入+	他約切	他約切	他略切	12a	0229-0334a	02076729-00000024	辵	辵	辵	辵	辶
 r	05	P118	10	05.10	Q119	Y119	徹入-	徹入-	徹入-	14a	125q	徹入-	徹入-	徹入-	丑亦切	丑亦切	丑亦切	18a	0229-0337a	02076729-00000036	彳	彳	彳	彳	*
@@ -396,8 +140,6 @@ r	05	P126	18	05.17	Q281	Y278	澄上-	澄上-	澄上-	17b	129p	澄上-	澄上-	�
 r	05	P127	19	05.18	Q156	Y156	澄上-	澄入+	澄入+	17b	129p	澄入+	澄入+	澄入+	直列切	直列切	雉列切	23b	0229-0339d	02076729-00000047	屮	屮	屮	屮	屮
 r	05	P128	20	05.19	Q028	Y035	孃上+	孃上+	孃上+	18a	129q	孃上+	孃上+	孃上+	尼與切	尼與切	尼與切	23b	0229-0339d	02076729-00000047	女	女	女	女	*
 r	05	P129	21	05.20	Q111	Y116	孃入+	孃入+	孃入+	24b	136p	孃入+	孃入+	孃入+	女涉切	女涉切	女涉切	32b	0229-0344b	02076729-00000065	㚔	㚔	㚔	㚔	𢆎,幸
-# P130: IA: They've forgot to scan page 346 of 續修四庫全書. As a result, 36a through 37b are missing.
-#           02076729-00000071 == 36b, 02076729-00000072 == 38a
 r	05	P130	22	05.21	Q150	Y148	孃入-	孃入-	孃入-	25a	136q	孃入-	孃入-	孃入-	尼厄切	尼厄切	尼厄切	32b	0229-0344b	02076729-00000065	疒	疒	疒	疒	*
 r	05	P131	23	05.22	Q455	Y455	孃入-	孃入-	孃入+	30a	141q	孃入-	孃入-	孃入-	女涉切	女涉切	女涉切	39b	0229-0347d	02076729-00000075	帇	帇	帇	帇	*
 
@@ -498,7 +240,6 @@ r	08	P213	23	08.23	Q257	Y256	微入+	微入+	微Ａ+	10a	207q	微入+	微入+	�
 
 
 v	09	36	23
-# P214: 成化丁亥重刊改併五音類聚四聲篇: "此夘字原子兮切是平聲字及乎考韻却是子𠯋切今改上聲永爲正矣"
 r	09	P214	01	09.01	Q439	Y439	精平+	精平+	精平+	01b	210p	精上+	精上+	精上+	子𠯋切	子𠯋切	子𠯋切	01b	0229-0395b	02076731-00000031	𠨍	夘	夘	夘	*
 r	09	P215	02	09.02	Q529	Y527	精上+	精上+	精上+	01b	210p	精上-	精上-	精上-	卽里切	卽里切	卽里切	01b	0229-0395b	02076731-00000031	子	子	子	子	*
 r	09	P216	03	09.03	Q126	Y126	精上-	精上-	精上-	02a	210q	精上-	精上-	精上-	子苟切	子苟切	子苟切	02b	0229-0395d	02076731-00000033	走	走	走	走	*
@@ -648,8 +389,6 @@ r	13	P343	16	13.16	Q049	Y045	匣平+	匣平+	匣平+	17b	321p	匣平+	匣平+	�
 r	13	P344	17	13.17	Q120	Y120	匣平-	匣平-	匣平-	17b	321p	匣平-	匣平-	匣平-	胡庚切	胡庚切	下庚切	27a	0229-0479c	02076734-00000054	行	行	行	行	*
 r	13	P345	18	13.18	Q020	Y015	匣平-	匣平-	匣平-	18a	321q	匣平-	匣平-	匣平-	胡光切	胡光切	胡光切	28a	0229-0480a	02076734-00000056	黃	黃	黃	黃	黄
 r	13	P346	19	13.19	Q175	Y173	匣平-	匣平-	匣平-	18b	322p	匣平-	匣平-	匣平-	戶瓜切	戶瓜切	胡瓜切	28b	0229-0480b	02076734-00000057	華	華	華	華	蕐,𦻏,𦾓
-# P347-349: IA: They've forgot to scan page 482 of 續修四庫全書. As a result, 32a through 33b are missing.
-#               02076734-00000063 == 31b, 02076734-00000064 == 34a
 r	13	P347	20	13.20	Q194	Y194	匣平-	匣平-	匣平-	18b	322p	匣平-	匣平-	匣平-	戶戈切	戶戈切	胡戈切	28b	0229-0480b	02076734-00000057	禾	禾	禾	禾	*
 r	13	P348	21	13.21	Q096	Y096	匣平-	匣平-	匣平-	22a	325q	匣平-	匣平-	匣平-	胡西切	乎西切	胡雞切	33b	0229-0482d	********-********	兮	兮	兮	兮	*
 r	13	P349	22	13.22	Q508	Y506	匣平-	匣平-	匣平-	22a	325q	匣平-	匣平-	匣平-	戶官切	戶官切	胡官切	33b	0229-0482d	02076734-00000064	丸	丸	丸	丸	*
@@ -682,8 +421,6 @@ r	13	P375	48	13.48	Q438	Y438	影去-	影去-	影去+	35b	339p	影去-	影去-	�
 r	13	P376	49	13.49	Q499	Y498	影去-	影去-	影去-	35b	339p	影去-	影去-	影去-	於嫁切	於嫁切	於訝切	54b	0229-0493b	02076734-00000105	亞	亞	亞	亞	亜
 r	13	P377	50	13.50	Q215	Y217	影去-	影去-	影去-	35b	339p	影去-	影去-	影去-	意下切	意下切	於下切	55a	0229-0493c	02076734-00000106	襾	覀	覀	覀	*
 r	13	P378	51	13.51	Q014	Y020	影入+	影入+	影去-	36a	339q	影入+	影入+	影入+	於訖切	於訖切	於急切	55b	0229-0493d	02076734-00000107	邑	邑	邑	邑	阝[R],⻏
-# P379: "乙" 部 can be both Y388 and Y514 (with the same pronunciation).
-#       Set to Y388 here because the first meaning of "乙" is from Y388 (as well as the fanqie rendering "於秩切" on the radical)
 r	13	P379	52	13.52	Q390	Y388	影入-	影入-	影去-	39b	343p	影入-	影入-	影入-	於气切	於乞切	於秩切	61a	0229-0496c	02076734-00000118	𠃉	乙	乙	乙	*
 r	13	P380	53	13.53	Q337	Y336	影入-	影入-	影去-	40a	343q	影入-	影入-	影入-	因吉切	因吉切	伊日切	61b	0229-0496d	02076734-00000119	壹	壹	壹	壹	壱
 r	13	P381	54	13.54	Q001	Y001	影入-	影入-	影去-	40a	343q	影入-	影入-	影入-	於悉切	於悉切	於逸切	61b	0229-0496d	02076734-00000119	一	一	一	一	*
@@ -736,7 +473,6 @@ r	15	P419	10	15.10	Q085	Y085	來上-	來上-	來上-	03b	361p	來上-	來上-	�
 r	15	P420	11	15.11	Q530	Y528	來上-	來上-	來上-	03b	361p	來上-	來上-	來上-	力鳥切	力小切	力鳥切	04b	0229-0508b	02076735-00000047	了	了	了	了	*
 r	15	P421	12	15.12	Q201	Y204	來上-	來上-	來上-	03b	361p	來上-	來上-	來上-	力甚切	力甚切	力甚切	04b	0229-0508b	02076735-00000047	㐭	㐭	㐭	㐭	*
 r	15	P422	13	15.13	Q241	Y237	來上-	來上-	來上-	03b	361p	來上-	來上-	來上-	力弟切	力弟切	力弟切	04b	0229-0508b	02076735-00000047	豊	豊	豊	豊	*
-# P423: "來去+" on 至元重刊五音篇 (on the main text)?
 r	15	P423	14	15.14	Q196	Y196	來上-	來上-	來去+	03b	361p	來上-	來上-	來上+	力軌切	力軌切	力軌切	05a	0229-0508c	02076735-00000048	耒	耒	耒	耒	*
 r	15	P424	15	15.15	q022	L178	來去+	來去+	來去+	04a	361q	來去+	來去+	來去+	力正切	力正切	力政切	05b	0229-0508d	02076735-00000049	令	令	令	令	*
 r	15	P425	16	15.16	Q373	Y372	來入+	來入+	來入+	04b	362p	來入+	來入+	來入+	力卜切	力卜切	力木切	06a	0229-0509a	02076735-00000050	鹿	鹿	鹿	鹿	*
@@ -765,29 +501,6 @@ r	15	P444	35	15.35	Q304	Y304	日入-	日入-	日入-	28a	385q	日入-	日入-	�
 
 
 
-# In 重編併部依三十六母再顯之圖, those radicals have citation mark of 龍龕:
-# * q009 (名)
-# * q010 (亭)
-# * q012 (寧)
-# * q013 (孚)
-# * q014 (䧹)
-# * q015 (尼)
-# * q016 (圭)
-# * q021 (夜)
-# * q030 (畨)
-# * q033 (尒)
-# Radicals below are not directly marked with citation mark of 龍龕 but placed
-# just under the radicals listed above.
-# * q034 (卷) - under q016 (圭)
-# * q035 (幵) - under q016 (圭) and q034 (卷)
-# * q036 (𠁼) - under q014 (䧹)
-# * q027 (益) - under q014 (䧹) and q036 (𠁼)
-# Note that all radicals in 龍龕餘部 (Longkan extra radicals) of Qunji Yupian [群籍玉篇]
-# except non-merged ones are listed above. It seems Wuyin Pianhai [五音篇海] does not distinguish
-# between 龍龕 radicals and 會玉川篇 radicals (q034-q036).
-# [JA] 統合された部首のうち群籍玉篇の龍龕餘部にあったものは上記のように
-# 全て直接的ないし間接的に龍龕の出典マークが付されている。
-# 五音篇海は、龍龕の部首と會玉川篇の部首 (q034-q036) を区別しないようだ。
 M	Q168	Y167	見	古宜切	箕	箕	Q167	P113	竹	竹	*
 M	Q402	Y402	見	古昏切	䖵	䖵	Q401	P334	虫	虫	*
 M	Q465	Y465	見	公丸切	毌	母	Q475	P208	毋	毋	貫,毋
@@ -811,9 +524,6 @@ M	Q441	Y441	見	古力切	茍	苟	Q162	P226	艸	艸	*
 M	Q070	Y070	見	居六切	𦥑	𦥑	Q198	P063	臼	𦥑	臼
 M	q016	L093	見	古攜切	圭	圭	Q009	P094	土	土	*
 M	q034	****	見	居遠切	卷	卷	Q520	P018	己	巳	巻
-# q035/Q067: 成化丁亥重刊改併五音類聚四聲篇: "――𠬞幵二字雖玉篇之部頭今重出之"
-#      Q067: 至元重刊五音篇: "居竦切在又部立廾字爲部"
-#      Q067: "𠬞" itself is merged to "又" 部 but ideographs in "𠬞" 部 are merged to new "廾" 部 (P028).
 M	q035	****	見	古先切	幵	幵	Q471	P007	干	干	*
 M	Q067	Y067	見	居竦切	𠬞	𠬞	Q075	P402	又	又	廾,卄
 M	Q019	Y016	溪	去留切	丠	丠	Q001	P381	一	一	丘
@@ -917,8 +627,6 @@ M	Q478	Y478	喩	余利切	𠂆	𠂆	Q477	P155	丿	丿	*
 M	Q451	Y451	喩	餘志切	異	異	Q015	P097	田	田	*
 M	Q325	Y325	喩	弋贍切	焱	焱	Q323	P335	火	火	*
 M	Q400	Y400	喩	余赤切	易	易	Q257	P213	勿	勿	*
-# q021: 夜 actually exists at "夕" 部 (P262) but clearly stated that is merged to "广" 部 in 重編併部依三十六母再顯之圖.
-#       Not separating the data for now.
 M	q021	L174	喩	余社切	夜	夜	Q352	P072	广	广	*
 M	Q160	Y159	來	力心切	林	林	Q161	P190	木	木	*
 M	Q357	Y356	來	力委切	厽	厽	Q493	P244	厶	厶	*
